@@ -2,11 +2,12 @@ Summary:	Dockable APM/Battery Monitor for WindowMaker
 Summary(pl):	Dokowalny monitor APM dla WindowMakera
 Name:		wmapm
 Version: 	3.01
-Release:	1
+Release:	2
 Copyright:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Source:		http://www.neotokyo.org/illusion/%{name}-%{version}.tar.gz
+Source0:	http://www.neotokyo.org/illusion/%{name}-%{version}.tar.gz
+Source1:	wmapm.desktop
 BuildPrereq:	XFree86-devel
 BuildPrereq:	xpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -43,10 +44,12 @@ make -C %{name} \
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} 
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
+	$RPM_BUILD_ROOT/etc/X11/applnk/DockApplets 
 
 install -s %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
 install %{name}/%{name}.1 $RPM_BUILD_ROOT%{_mandir}/man1
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/DockApplets
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	BUGS CHANGES README HINTS TODO
@@ -58,8 +61,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc {BUGS,CHANGES,README,HINTS,TODO}.gz
 %attr(755,root,root) %{_bindir}/%{name}
-
 %{_mandir}/man1/*
+
+/etc/X11/applnk/DockApplets/wmapm.desktop
 
 %changelog
 * Sun May  9 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
