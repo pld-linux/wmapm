@@ -4,7 +4,7 @@ Summary(pt_BR):	Aplicativo do dock do WindowMaker para monitorar a carga da bate
 Summary(es):	Una aplicación para monitorar la batería en el dock del WindowMaker
 Name:		wmapm
 Version:	3.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://nis-www.lanl.gov/~mgh/WindowMaker/%{name}-%{version}.tar.gz
@@ -53,11 +53,11 @@ Basado en soporte APM del kernel. Es útil en notebooks.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
-	$RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+	$RPM_BUILD_ROOT%{_desktopdir}/docklets
 
 install %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
 install %{name}/%{name}.1 $RPM_BUILD_ROOT%{_mandir}/man1
-#install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/docklets
 
 
 %clean
@@ -68,4 +68,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc BUGS CHANGES README HINTS TODO
 %attr(755,root,root) %{_bindir}/%{name}
 %{_mandir}/man1/*
-#%%{_applnkdir}/DockApplets/wmapm.desktop
+%{_desktopdir}/docklets/wmapm.desktop
