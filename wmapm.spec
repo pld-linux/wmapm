@@ -8,6 +8,7 @@ Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://nis-www.lanl.gov/~mgh/WindowMaker/%{name}-%{version}.tar.gz
+# Source0-md5:	5a62620d49b5cc4c2250e013149ca1e9
 Source1:	%{name}.desktop
 URL:		http://nis-www.lanl.gov/~mgh/WindowMaker/DockApps.shtml
 BuildRequires:	XFree86-devel
