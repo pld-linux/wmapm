@@ -5,3 +5,4 @@ Comment[pl]=Monitor stanu baterii
 Exec=wmapm
 Terminal=0
 Type=Application
+# vi: encoding=utf-8
