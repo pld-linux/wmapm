@@ -32,7 +32,7 @@ Linuksa. WMAPM dostarcza obecnie nastêpuj±cych informacji:
 	* Czas pozosta³y do wyczerpania baterii;
 	* Stan obci±¿enia baterii;
 	* Stan baterii: Wysoki/Niski/Krytyczny (Czerwony/¯ó³ty/Zielony);
-	
+
 %description -l pt_BR
 Aplicativo do dock do WindowMaker para monitorar a carga da bateria,
 através do suporte APM do kernel. Esta informação é útil para
