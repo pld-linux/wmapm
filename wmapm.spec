@@ -11,7 +11,7 @@ BuildPrereq:	XFree86-devel
 BuildPrereq:	xpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
-%define _prefix         /usr/X11R6
+%define _prefix	/usr/X11R6
 
 %description
 WMAPM monitors the APM statistics through the APM support in
@@ -35,9 +35,9 @@ Linuxa. WMAPM dostarcza obecnie nastêpuj±cych informacji:
 %setup -q
 
 %build
-cd %{name}
-make clean
-make COPTS="$RPM_OPT_FLAGS -Wall -I/usr/X11R6/include"
+make -C %{name} clean
+make -C %{name} \
+	COPTS="$RPM_OPT_FLAGS -Wall -I/usr/X11R6/include"
 
 %install
 rm -rf $RPM_BUILD_ROOT
