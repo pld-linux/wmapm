@@ -1,13 +1,14 @@
 Summary:	Dockable APM/Battery Monitor for WindowMaker
 Summary(pl):	Dokowalny monitor APM dla WindowMakera
 Name:		wmapm
-Version: 	3.01
+Version:	3.01
 Release:	2
-Copyright:	GPL
+License:	GPL
 Group:		X11/Window Managers/Tools
+Group(de):	X11/Fenstermanager/Werkzeuge
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://www.neotokyo.org/illusion/%{name}-%{version}.tar.gz
-Source1:	wmapm.desktop
+Source1:	%{name}.desktop
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,7 +39,7 @@ Linuxa. WMAPM dostarcza obecnie nastêpuj±cych informacji:
 %build
 %{__make} -C %{name} clean
 %{__make} -C %{name} \
-	COPTS="$RPM_OPT_FLAGS -Wall -I/usr/X11R6/include"
+	COPTS="%{rpmcflags} -Wall -I/usr/X11R6/include"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -46,12 +47,11 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
 	$RPM_BUILD_ROOT%{_applnkdir}/DockApplets 
 
-install -s %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
+install %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
 install %{name}/%{name}.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	BUGS CHANGES README HINTS TODO
+gzip -9nf BUGS CHANGES README HINTS TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
