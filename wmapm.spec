@@ -35,7 +35,7 @@ Linuxa. WMAPM dostarcza obecnie nastêpuj±cych informacji:
 %build
 cd wmapm
 make clean
-make COPTS="$RPM_OPT_FLAGS -Wall"
+make COPTS="$RPM_OPT_FLAGS -Wall -I/usr/X11R6/include"
 
 %install
 rm -rf $RPM_BUILD_ROOT
