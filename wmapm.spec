@@ -10,11 +10,10 @@ Source0:	http://www.neotokyo.org/illusion/%{name}-%{version}.tar.gz
 Source1:	wmapm.desktop
 BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix		/usr/X11R6
 %define 	_mandir 	%{_prefix}/man
-%define		_applnkdir	%{_datadir}/applnk
 
 %description
 WMAPM monitors the APM statistics through the APM support in
