@@ -61,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Sun May  9 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [3.01-1]
-- now package is FHS 2.0 compiliat.
+- now package is FHS 2.0 compliat.
 
 * Wed Apr  5 1999 Piotr Czerwiñski <pius@pld.org.pl>
 - initial rpm release for PLD.
