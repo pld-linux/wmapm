@@ -12,6 +12,7 @@ BuildPrereq:	xpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define _prefix	/usr/X11R6
+%define _mandir %{_prefix}/man
 
 %description
 WMAPM monitors the APM statistics through the APM support in
