@@ -27,7 +27,7 @@ the Linux kernel. WMAPM currently provides:
 
 %description -l pl
 WMAPM monitoruje statystyki APM wykorzystuj±c funkcje zawarte w j±drze
-Linuxa. WMAPM dostarcza obecnie nastêpuj±cych informacji:
+Linuksa. WMAPM dostarcza obecnie nastêpuj±cych informacji:
 	* Rodzaj wykorzystywanego ¼ród³a energii (bateria lub zasilacz);
 	* D³ugo¶æ ¿ycia baterii (w procentach lub graficznie);
 	* Czas pozosta³y do wyczerpania baterii;
