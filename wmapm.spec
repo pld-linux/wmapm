@@ -1,8 +1,10 @@
 Summary:	Dockable APM/Battery Monitor for WindowMaker
 Summary(pl):	Dokowalny monitor APM dla WindowMakera
+Summary(pt_BR):	Aplicativo do dock do WindowMaker para monitorar a carga da bateria
+Summary(es):	Una aplicación para monitorar la batería en el dock del WindowMaker
 Name:		wmapm
-Version:	3.01
-Release:	2
+Version:	3.1
+Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
@@ -33,6 +35,15 @@ Linuxa. WMAPM dostarcza obecnie nastêpuj±cych informacji:
 	* Czas pozosta³y do wyczerpania baterii;
 	* Stan obci±¿enia baterii;
 	* Stan baterii: Wysoki/Niski/Krytyczny (Czerwony/¯ó³ty/Zielony);
+	
+%description -l pt_BR
+Aplicativo do dock do WindowMaker para monitorar a carga da bateria,
+através do suporte APM do kernel. Esta informação é útil para
+usuários de laptops.
+
+%description -l es
+Aplicación para monitorar la batería en el dock del WindowMaker.
+Basado en soporte APM del kernel. Es útil en notebooks.
 
 %prep
 %setup -q
@@ -46,7 +57,7 @@ Linuxa. WMAPM dostarcza obecnie nastêpuj±cych informacji:
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
-	$RPM_BUILD_ROOT%{_applnkdir}/DockApplets 
+	$RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 install %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
 install %{name}/%{name}.1 $RPM_BUILD_ROOT%{_mandir}/man1
