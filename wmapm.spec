@@ -19,20 +19,20 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 WMAPM monitors the APM statistics through the APM support in
 the Linux kernel. WMAPM currently provides:
-        * Status of power supply (battery or AC);
-        * Percentage of battery remaining (numeric and meter);
-        * Battery charging status;
-        * Time left to battery depletion;
-        * High/Low/Critical battery status (Red/Yellow/Green);
+- Status of power supply (battery or AC);
+- Percentage of battery remaining (numeric and meter);
+- Battery charging status;
+- Time left to battery depletion;
+- High/Low/Critical battery status (Red/Yellow/Green);
 
 %description -l pl
 WMAPM monitoruje statystyki APM wykorzystuj±c funkcje zawarte w j±drze
 Linuksa. WMAPM dostarcza obecnie nastêpuj±cych informacji:
-	* Rodzaj wykorzystywanego ¼ród³a energii (bateria lub zasilacz);
-	* D³ugo¶æ ¿ycia baterii (w procentach lub graficznie);
-	* Czas pozosta³y do wyczerpania baterii;
-	* Stan obci±¿enia baterii;
-	* Stan baterii: Wysoki/Niski/Krytyczny (Czerwony/¯ó³ty/Zielony);
+- Rodzaj wykorzystywanego ¼ród³a energii (bateria lub zasilacz);
+- D³ugo¶æ ¿ycia baterii (w procentach lub graficznie);
+- Czas pozosta³y do wyczerpania baterii;
+- Stan obci±¿enia baterii;
+- Stan baterii: Wysoki/Niski/Krytyczny (Czerwony/¯ó³ty/Zielony);
 
 %description -l pt_BR
 Aplicativo do dock do WindowMaker para monitorar a carga da bateria,
