@@ -40,12 +40,12 @@ make COPTS="$RPM_OPT_FLAGS -Wall"
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT/usr/X11R6/{bin,man/man1}
+install -d $RPM_BUILD_ROOT/usr/X11R6/{bin,share/man/man1}
 
 install -s wmapm/wmapm $RPM_BUILD_ROOT/usr/X11R6/bin
-install wmapm/wmapm.1 $RPM_BUILD_ROOT/usr/X11R6/man/man1
+install wmapm/wmapm.1 $RPM_BUILD_ROOT/usr/X11R6/share/man/man1
 
-gzip -9nf $RPM_BUILD_ROOT/usr/X11R6/man/man1/* \
+gzip -9nf $RPM_BUILD_ROOT/usr/X11R6/share/man/man1/* \
 	BUGS CHANGES README HINTS TODO
 
 %clean
@@ -56,9 +56,12 @@ rm -rf $RPM_BUILD_ROOT
 %doc {BUGS,CHANGES,README,HINTS,TODO}.gz
 %attr(755,root,root) /usr/X11R6/bin/wmapm
 
-/usr/X11R6/man/man1/wmapm.1.gz
+/usr/X11R6/share/man/man1/wmapm.1.gz
 
 %changelog
-* Wed Apr  5 1999 Piotr Czerwiñski <pius@pld.org.pl>
+* Sun May  9 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [3.01-1]
+- now package is FHS 2.0 compiliat.
+
+* Wed Apr  5 1999 Piotr Czerwiñski <pius@pld.org.pl>
 - initial rpm release for PLD.
