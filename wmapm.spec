@@ -11,6 +11,8 @@ BuildPrereq:	XFree86-devel
 BuildPrereq:	xpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
+%define _prefix         /usr/X11R6
+
 %description
 WMAPM monitors the APM statistics through the APM support in
 the Linux kernel. WMAPM currently provides:
@@ -33,19 +35,19 @@ Linuxa. WMAPM dostarcza obecnie nastêpuj±cych informacji:
 %setup -q
 
 %build
-cd wmapm
+cd %{name}
 make clean
 make COPTS="$RPM_OPT_FLAGS -Wall -I/usr/X11R6/include"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT/usr/X11R6/{bin,share/man/man1}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} 
 
-install -s wmapm/wmapm $RPM_BUILD_ROOT/usr/X11R6/bin
-install wmapm/wmapm.1 $RPM_BUILD_ROOT/usr/X11R6/share/man/man1
+install -s %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
+install %{name}/%{name}.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf $RPM_BUILD_ROOT/usr/X11R6/share/man/man1/* \
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	BUGS CHANGES README HINTS TODO
 
 %clean
@@ -54,9 +56,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc {BUGS,CHANGES,README,HINTS,TODO}.gz
-%attr(755,root,root) /usr/X11R6/bin/wmapm
+%attr(755,root,root) %{_bindir}/%{name}
 
-/usr/X11R6/share/man/man1/wmapm.1.gz
+%{_mandir}/man1/*
 
 %changelog
 * Sun May  9 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
