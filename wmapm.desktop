@@ -6,4 +6,6 @@ Comment[pl]=Monitor stanu baterii i APM
 Exec=wmapm
 Terminal=false
 Type=Application
+Categories=X-Docklet;Utility;Monitor;
+NotShownIn=GNOME;KDE;
 # vi: encoding=utf-8
