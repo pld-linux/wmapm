@@ -4,7 +4,7 @@ Summary(pt_BR):	Aplicativo do dock do WindowMaker para monitorar a carga da bate
 Summary(es):	Una aplicación para monitorar la batería en el dock del WindowMaker
 Name:		wmapm
 Version:	3.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://nis-www.lanl.gov/~mgh/WindowMaker/%{name}-%{version}.tar.gz
