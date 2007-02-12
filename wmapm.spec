@@ -1,7 +1,7 @@
 Summary:	Dockable APM/Battery Monitor for WindowMaker
-Summary(pl):	Dokowalny monitor APM dla WindowMakera
-Summary(pt_BR):	Aplicativo do dock do WindowMaker para monitorar a carga da bateria
-Summary(es):	Una aplicación para monitorar la batería en el dock del WindowMaker
+Summary(pl.UTF-8):   Dokowalny monitor APM dla WindowMakera
+Summary(pt_BR.UTF-8):   Aplicativo do dock do WindowMaker para monitorar a carga da bateria
+Summary(es.UTF-8):   Una aplicaciÃ³n para monitorar la baterÃ­a en el dock del WindowMaker
 Name:		wmapm
 Version:	3.1
 Release:	5
@@ -25,23 +25,23 @@ the Linux kernel. WMAPM currently provides:
 - Time left to battery depletion;
 - High/Low/Critical battery status (Red/Yellow/Green);
 
-%description -l pl
-WMAPM monitoruje statystyki APM wykorzystuj±c funkcje zawarte w j±drze
-Linuksa. WMAPM dostarcza obecnie nastêpuj±cych informacji:
-- Rodzaj wykorzystywanego ¼ród³a energii (bateria lub zasilacz);
-- D³ugo¶æ ¿ycia baterii (w procentach lub graficznie);
-- Czas pozosta³y do wyczerpania baterii;
-- Stan obci±¿enia baterii;
-- Stan baterii: Wysoki/Niski/Krytyczny (Czerwony/¯ó³ty/Zielony);
+%description -l pl.UTF-8
+WMAPM monitoruje statystyki APM wykorzystujÄ…c funkcje zawarte w jÄ…drze
+Linuksa. WMAPM dostarcza obecnie nastÄ™pujÄ…cych informacji:
+- Rodzaj wykorzystywanego ÅºrÃ³dÅ‚a energii (bateria lub zasilacz);
+- DÅ‚ugoÅ›Ä‡ Å¼ycia baterii (w procentach lub graficznie);
+- Czas pozostaÅ‚y do wyczerpania baterii;
+- Stan obciÄ…Å¼enia baterii;
+- Stan baterii: Wysoki/Niski/Krytyczny (Czerwony/Å»Ã³Å‚ty/Zielony);
 
-%description -l pt_BR
+%description -l pt_BR.UTF-8
 Aplicativo do dock do WindowMaker para monitorar a carga da bateria,
-através do suporte APM do kernel. Esta informação é útil para
-usuários de laptops.
+atravÃ©s do suporte APM do kernel. Esta informaÃ§Ã£o Ã© Ãºtil para
+usuÃ¡rios de laptops.
 
-%description -l es
-Aplicación para monitorar la batería en el dock del WindowMaker.
-Basado en soporte APM del kernel. Es útil en notebooks.
+%description -l es.UTF-8
+AplicaciÃ³n para monitorar la baterÃ­a en el dock del WindowMaker.
+Basado en soporte APM del kernel. Es Ãºtil en notebooks.
 
 %prep
 %setup -q
