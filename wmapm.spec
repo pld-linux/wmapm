@@ -1,7 +1,7 @@
 Summary:	Dockable APM/Battery Monitor for WindowMaker
-Summary(pl.UTF-8):   Dokowalny monitor APM dla WindowMakera
-Summary(pt_BR.UTF-8):   Aplicativo do dock do WindowMaker para monitorar a carga da bateria
-Summary(es.UTF-8):   Una aplicación para monitorar la batería en el dock del WindowMaker
+Summary(pl.UTF-8):	Dokowalny monitor APM dla WindowMakera
+Summary(pt_BR.UTF-8):	Aplicativo do dock do WindowMaker para monitorar a carga da bateria
+Summary(es.UTF-8):	Una aplicación para monitorar la batería en el dock del WindowMaker
 Name:		wmapm
 Version:	3.1
 Release:	5
